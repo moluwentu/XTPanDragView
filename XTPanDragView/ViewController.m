@@ -7,15 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "XTPanView.h"
-#import "Masonry.h"
+#import "XTPanDragView.h"
 
-#define secondViewTransForm 0.97
 
-@interface ViewController ()<XTPanViewDragDelegate>
+@interface ViewController ()
 
-@property (nonatomic, strong)XTPanView *firstPanView;
-@property (nonatomic, strong)XTPanView *secondPanView;
 
 @end
 
@@ -24,68 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    [self creatPanView];
-    [self creatPanView];
-    
-    //    XTPanView *panView = [[XTPanView alloc]init];
-    //    [self.view addSubview:panView];
-    //
-    //    panView.delegate = self;
-    
-    //    [panView mas_makeConstraints:^(MASConstraintMaker *make) {
-    //        make.center.equalTo(self.view);
-    //        make.height.equalTo(@300);
-    //        make.width.equalTo(@300);
-    //    }];
+    XTPanDragView *panDragView = [[XTPanDragView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) andDragViewSize:CGSizeMake(300, 300)];
+    [self.view addSubview:panDragView];
 }
 
-- (void)creatPanView{
-    
-    XTPanView *panView = [[XTPanView alloc]init];
-    panView.delegate = self;
-    
-    if (!self.firstPanView) {
-        self.firstPanView = panView;
-        self.firstPanView.userInteractionEnabled = YES;
-        [self.view addSubview:self.firstPanView];
-    }else{
-        if (self.secondPanView) {
-            self.firstPanView = self.secondPanView;
-            self.firstPanView.userInteractionEnabled = YES;
-            self.secondPanView = panView;
-        }
-        
-        self.secondPanView = panView;
-        panView.transform = CGAffineTransformScale(CGAffineTransformIdentity, secondViewTransForm, secondViewTransForm);
-        [self.view insertSubview:panView belowSubview:self.firstPanView];
-    }
-    
-    [panView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
-        make.height.equalTo(@300);
-        make.width.equalTo(@300);
-    }];
-}
-
-- (void)didDragLeft:(UIView *)panView{
-    [self creatPanView];
-}
-
-- (void)didDragRight:(UIView *)panView{
-    [self creatPanView];
-}
-
-- (void)dragging:(CGFloat)factor{
-    CGFloat scale = secondViewTransForm + (1 - secondViewTransForm) *factor;
-    self.secondPanView.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale);
-}
-
-- (void)willBackToCenter:(CGFloat)factor{
-    [UIView animateWithDuration:0.3 animations:^{
-        self.secondPanView.transform = CGAffineTransformScale(CGAffineTransformIdentity, secondViewTransForm, secondViewTransForm);
-    }];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

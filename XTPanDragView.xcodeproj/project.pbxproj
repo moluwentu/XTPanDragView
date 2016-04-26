@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63F24AED1CCF3B6200445E77 /* XTPanDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F24AEC1CCF3B6200445E77 /* XTPanDragView.m */; };
 		63F63A151CCDAFF000EF3A29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F63A141CCDAFF000EF3A29 /* main.m */; };
 		63F63A181CCDAFF000EF3A29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F63A171CCDAFF000EF3A29 /* AppDelegate.m */; };
 		63F63A1B1CCDAFF000EF3A29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F63A1A1CCDAFF000EF3A29 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63F24AEB1CCF3B6200445E77 /* XTPanDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPanDragView.h; sourceTree = "<group>"; };
+		63F24AEC1CCF3B6200445E77 /* XTPanDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPanDragView.m; sourceTree = "<group>"; };
 		63F63A101CCDAFF000EF3A29 /* XTPanDragView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTPanDragView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F63A141CCDAFF000EF3A29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63F63A161CCDAFF000EF3A29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				63F63A171CCDAFF000EF3A29 /* AppDelegate.m */,
 				63F63A191CCDAFF000EF3A29 /* ViewController.h */,
 				63F63A1A1CCDAFF000EF3A29 /* ViewController.m */,
+				63F24AEB1CCF3B6200445E77 /* XTPanDragView.h */,
+				63F24AEC1CCF3B6200445E77 /* XTPanDragView.m */,
 				63F63A381CCDB01B00EF3A29 /* XTPanView.h */,
 				63F63A391CCDB01B00EF3A29 /* XTPanView.m */,
 				63F63A1C1CCDAFF000EF3A29 /* Main.storyboard */,
@@ -298,6 +303,7 @@
 				63F63A5C1CCDB05900EF3A29 /* MASViewConstraint.m in Sources */,
 				63F63A5B1CCDB05900EF3A29 /* MASViewAttribute.m in Sources */,
 				63F63A5F1CCDB05900EF3A29 /* View+MASAdditions.m in Sources */,
+				63F24AED1CCF3B6200445E77 /* XTPanDragView.m in Sources */,
 				63F63A181CCDAFF000EF3A29 /* AppDelegate.m in Sources */,
 				63F63A151CCDAFF000EF3A29 /* main.m in Sources */,
 				63F63A571CCDB05900EF3A29 /* MASCompositeConstraint.m in Sources */,
@@ -490,6 +496,7 @@
 				63F63A341CCDAFF000EF3A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63F63A351CCDAFF000EF3A29 /* Build configuration list for PBXNativeTarget "XTPanDragViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +505,7 @@
 				63F63A371CCDAFF000EF3A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
