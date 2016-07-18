@@ -24,7 +24,7 @@
 @implementation XTPanDragView
 
 - (instancetype)initWithFrame:(CGRect)frame andDragViewSize:(CGSize)dragViewSize{
-    if (self == [super initWithFrame:frame]) {
+    if (self = [super initWithFrame:frame]) {
         
         self.dragSize = dragViewSize;
         

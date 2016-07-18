@@ -27,7 +27,7 @@
 @implementation XTPanView
 
 - (instancetype)init{
-    if (self == [super init]) {
+    if (self = [super init]) {
         self.backgroundColor = [self randomColor];
         self.userInteractionEnabled = NO;
         UIPanGestureRecognizer *panGrs = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGesed:)];
